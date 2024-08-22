@@ -1,7 +1,7 @@
 .container {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
 }
 
@@ -69,4 +69,12 @@
 .github-button:active {
   box-shadow: none;
   transform: translateY(0);
+}
+@media screen and (max-width: 768px) {
+  .github-button {
+    font-size: 10px;
+  }
+  .social-icons {
+    font-size: 16px;
+  }
 }

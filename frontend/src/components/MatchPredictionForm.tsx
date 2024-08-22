@@ -182,6 +182,15 @@ const MatchPrediction: React.FC = () => {
           fullWidth
           margin="normal"
           color="secondary"
+          sx={{
+            "@media (max-width: 600px)": {
+              fontSize: "0.8rem",
+              padding: "8px",
+              "& .MuiInputBase-root": {
+                height: "40px", // Adjust this value as needed
+              },
+            },
+          }}
         >
           {days.map((day) => (
             <MenuItem key={day} value={day}>
@@ -198,6 +207,15 @@ const MatchPrediction: React.FC = () => {
           fullWidth
           color="secondary"
           margin="normal"
+          sx={{
+            "@media (max-width: 600px)": {
+              fontSize: "0.8rem",
+              padding: "8px",
+              "& .MuiInputBase-root": {
+                height: "40px", // Adjust this value as needed
+              },
+            },
+          }}
         >
           {gameWeeks.map((week) => (
             <MenuItem key={week} value={week}>
@@ -214,6 +232,15 @@ const MatchPrediction: React.FC = () => {
           fullWidth
           margin="normal"
           color="secondary"
+          sx={{
+            "@media (max-width: 600px)": {
+              fontSize: "0.8rem",
+              padding: "8px",
+              "& .MuiInputBase-root": {
+                height: "40px", // Adjust this value as needed
+              },
+            },
+          }}
         >
           {teams.map((team) => (
             <MenuItem
@@ -236,6 +263,14 @@ const MatchPrediction: React.FC = () => {
           color="secondary"
           sx={{
             marginBottom: 4,
+
+            "@media (max-width: 600px)": {
+              fontSize: "0.8rem",
+              padding: "8px",
+              "& .MuiInputBase-root": {
+                height: "40px", // Adjust this value as needed
+              },
+            },
           }}
         >
           {teams.map((team) => (
@@ -260,6 +295,11 @@ const MatchPrediction: React.FC = () => {
             background: "#734CC1",
             ":hover": {
               backgroundColor: "#BCACDD",
+            },
+            "@media (max-width: 600px)": {
+              fontSize: "0.8rem",
+              padding: "8px",
+              height: "40px", // Adjust this value as needed
             },
           }}
         >

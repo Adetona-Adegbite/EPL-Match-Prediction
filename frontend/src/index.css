@@ -1,5 +1,6 @@
 body {
   background: url("./assets/premier-league-background-3f414ro7305e194l.jpg");
+  background-size: contain;
   /* display: flex;
   justify-content: center;
   align-items: center; */

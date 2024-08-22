@@ -37,6 +37,15 @@ const TimePicker: React.FC<TimePickerProps> = ({ onTimeChange }) => {
             //@ts-ignore
             onChange={handleHourChange}
             color="secondary"
+            sx={{
+              "@media (max-width: 600px)": {
+                fontSize: "0.8rem",
+                height: "40px",
+                ".MuiSelect-select": {
+                  padding: "8px",
+                },
+              },
+            }}
           >
             {hours.map((hr) => (
               <MenuItem key={hr} value={hr}>
@@ -55,6 +64,15 @@ const TimePicker: React.FC<TimePickerProps> = ({ onTimeChange }) => {
 
             onChange={handleMinuteChange}
             color="secondary"
+            sx={{
+              "@media (max-width: 600px)": {
+                fontSize: "0.8rem",
+                height: "40px",
+                ".MuiSelect-select": {
+                  padding: "8px",
+                },
+              },
+            }}
           >
             {minutes.map((min) => (
               <MenuItem key={min} value={min}>
