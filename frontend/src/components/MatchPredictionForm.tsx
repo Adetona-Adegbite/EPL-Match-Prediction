@@ -19,6 +19,7 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
+import { ClipLoader } from "react-spinners";
 
 const teams = [
   "Arsenal",
@@ -66,7 +67,7 @@ const MatchPrediction: React.FC = () => {
   const [alert, setAlert] = useState<{ data: string; severity: string } | null>(
     null
   );
-
+  const [loading, setLoading] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
@@ -88,7 +89,7 @@ const MatchPrediction: React.FC = () => {
       setAlert({ data: "Please fill in all fields.", severity: "warning" });
       return;
     }
-
+    setLoading(true);
     try {
       const response = await axios.post(
         "https://epl-prediction-fza0h8fcgtdqarcf.eastus-01.azurewebsites.net/predict",
@@ -105,6 +106,8 @@ const MatchPrediction: React.FC = () => {
         data: "Error submitting prediction. Try again later",
         severity: "error",
       });
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -303,7 +306,7 @@ const MatchPrediction: React.FC = () => {
             },
           }}
         >
-          Predict
+          {loading ? <ClipLoader color="#ffffff" size={20} /> : "Predict"}{" "}
         </Button>
       </Box>
       <Typography
