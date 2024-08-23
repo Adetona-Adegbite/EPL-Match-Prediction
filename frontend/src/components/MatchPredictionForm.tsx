@@ -91,7 +91,7 @@ const MatchPrediction: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/predict",
+        "https://epl-prediction-fza0h8fcgtdqarcf.eastus-01.azurewebsites.net/predict",
         formData
       );
       console.log(response);
